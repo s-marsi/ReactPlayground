@@ -1,0 +1,11 @@
+.card-body h5{
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  font-size: 18px;
+  font-family: Poppins, Arial, Helvetica, sans-serif;
+}
+.price{
+  font-weight: 600px;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
