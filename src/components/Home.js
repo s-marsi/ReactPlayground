@@ -3,7 +3,7 @@ import { React } from "react";
 import { useSelector, useDispatch } from 'react-redux'
 
 const Home = () => {
-  const data = useSelector((state) => state.products.products)
+  const data = useSelector((state) => state.prods.products)
   // const [data, setData] = useState([]);
   // const url = "https://fakestoreapi.com/products";
 
