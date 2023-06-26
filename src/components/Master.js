@@ -39,6 +39,9 @@ export default function Layouts() {
                 </Link>
               </li>
             </ul>
+            <Link className="btn btn-info rounded" to="create">
+                  New Product
+            </Link>
           </div>
         </div>
       </nav>
