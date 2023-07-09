@@ -119,13 +119,7 @@ const ProductSlice = createSlice({
       );
     },
     edit: (state, action) => {
-      state.products = state.products.map((product) =>
-        {if(+product.id === +action.payload){
-          product.rating.count += 1;
-          return product
-        }
-        return product;}
-      );
+        state.products[action.payload].rating.count  -= 1 ; 
     },
   },
 

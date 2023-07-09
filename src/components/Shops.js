@@ -1,8 +1,8 @@
 // import { React, useEffect, useState } from "react";
 import { React } from "react";
-import {useDispatch, useSelector} from 'react-redux'
+import {useDispatch, useSelector} from 'react-redux';
 import { supp, add, edit } from "./ProductSlice";
-import "./css/Shop.css"
+import "./css/Shop.css";
 const Shop = () => {
   const data = useSelector((state) => state.prods.products)
   const dispatch = useDispatch();
@@ -18,8 +18,8 @@ const Shop = () => {
     <div className="container">
       <div className="row justify-content-around">
         {data
-          ? data.map((data) => (
-              <div className="col-3 m-3">
+          ? data.map((data, index) => (
+              <div className="col-3 m-3" key={index}>
                 <div className="card" style={{"width" : "18rem"}}>
                   <img className="card-img-top" alt="test" src={data.image} style={{height : "300px"}}/>
                   <div className="card-body text-center">
@@ -29,7 +29,7 @@ const Shop = () => {
                     <a href={"shop/" + data.id}className="btn btn-primary ">
                       VIEW DETAIL
                     </a>
-                    <button className="btn btn-primary ms-1" onClick={() => dispatch(edit(data.id))}>
+                    <button className="btn btn-primary ms-1" onClick={() => dispatch(edit(index))}>
                       EDIT PRODUCT
                     </button>
                   </div>
